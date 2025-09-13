@@ -73,11 +73,10 @@
 
   <script src="js/script.js"></script>
   <script>
-    // Render cart items on page load
+    
     document.addEventListener('DOMContentLoaded', () => {
       window.CHEF.renderCartItems();
 
-      // Clear cart button
       const clearBtn = document.getElementById('clear-cart-btn');
       clearBtn.addEventListener('click', () => {
         if(confirm('Are you sure you want to clear the cart?')) {
@@ -90,4 +89,5 @@
     });
   </script>
 </body>
+
 </html>
