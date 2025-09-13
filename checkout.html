@@ -108,12 +108,10 @@
         return;
       }
 
-      // Demo: clear cart and show confirmation
       window.CHEF.showToast('Order placed — demo only');
       localStorage.removeItem('cheffood_cart_v1');
       window.CHEF.updateCartCount();
 
-      // Redirect to home after short delay
       setTimeout(() => {
         location.href = 'index.html';
       }, 900);
@@ -153,4 +151,5 @@
     });
   </script>
 </body>
+
 </html>
