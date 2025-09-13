@@ -184,13 +184,12 @@ main {
   padding: 24px 0;
 }
 
-/* Banner styles with image behind welcome box */
 .banner {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 32px;
-  height: 400px; /* fixed height */
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,16 +204,16 @@ main {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  filter: brightness(0.6); /* darken image for text readability */
+  filter: brightness(0.6);
   border-radius: 8px;
 }
 
 .banner-text {
   position: relative;
-  z-index: 1; /* above the image */
+  z-index: 1;
   max-width: 600px;
   padding: 24px 32px;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   color: #fff;
   text-align: center;
@@ -447,8 +446,6 @@ footer .socials a:focus {
   pointer-events: auto;
 }
 
-/* Responsive */
-
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -476,4 +473,5 @@ footer .socials a:focus {
   .products-grid {
     grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
   }
+
 }
