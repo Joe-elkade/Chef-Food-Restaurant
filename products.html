@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CHEF FOOD Shop - Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Optional: add some spacing between categories */
+    .category-section {
+      margin-bottom: 48px;
+    }
+    .category-section h2 {
+      font-family: 'Pacifico', cursive;
+      color: var(--primary);
+      margin-bottom: 24px;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">CHEF FOOD Shop</a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle" aria-label="Toggle theme">Dark</button>
+        <button class="cart-btn" onclick="location.href='cart.html'" aria-label="View cart">
+          🛒 <span class="cart-count" style="display:none">0</span>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav container">
+      <a href="index.html">Home</a> |
+      <a href="products.html">Products</a> |
+      <a href="offers.html">Offers</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1>Our Products</h1>
+
+      <div class="search-wrap">
+        <input
+          id="product-search"
+          placeholder="Search products, e.g. 'juice' or 'salad'"
+          aria-label="Search products"
+        />
+      </div>
+
+      <!-- Category: Beverages -->
+      <section class="category-section" id="beverages">
+        <h2>Beverages</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="assets/images/juice.jpeg" alt="Fresh Orange Juice" loading="lazy" />
+            <h3>Fresh Orange Juice</h3>
+            <p class="muted">Cold-pressed and naturally sweet.</p>
+            <span class="price">25 L.E</span>
+            <button
+              data-add-cart
+              data-id="juice-1"
+              data-title="Fresh Orange Juice"
+              data-price="25"
+              aria-label="Add Fresh Orange Juice to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/green-tea.jpeg" alt="Organic Green Tea" loading="lazy" />
+            <h3>Organic Green Tea</h3>
+            <p class="muted">Refreshing and healthy.</p>
+            <span class="price">30 L.E</span>
+            <button
+              data-add-cart
+              data-id="green-tea-1"
+              data-title="Organic Green Tea"
+              data-price="30"
+              aria-label="Add Organic Green Tea to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/coffee.jpeg" alt="Espresso Coffee" loading="lazy" />
+            <h3>Espresso Coffee</h3>
+            <p class="muted">Rich and bold flavor.</p>
+            <span class="price">40 L.E</span>
+            <button
+              data-add-cart
+              data-id="coffee-1"
+              data-title="Espresso Coffee"
+              data-price="40"
+              aria-label="Add Espresso Coffee to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category: Salads -->
+      <section class="category-section" id="salads">
+        <h2>Salads</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="assets/images/salad.jpeg" alt="Fresh Salad" loading="lazy" />
+            <h3>Fresh Salad</h3>
+            <p class="muted">Seasonal veggies with house dressing.</p>
+            <span class="price">20 L.E</span>
+            <button
+              data-add-cart
+              data-id="salad-1"
+              data-title="Fresh Salad"
+              data-price="20"
+              aria-label="Add Fresh Salad to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/caesar-salad.jpeg" alt="Caesar Salad" loading="lazy" />
+            <h3>Caesar Salad</h3>
+            <p class="muted">Classic Caesar with croutons.</p>
+            <span class="price">55 L.E</span>
+            <button
+              data-add-cart
+              data-id="caesar-salad-1"
+              data-title="Caesar Salad"
+              data-price="55"
+              aria-label="Add Caesar Salad to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/fruit-salad.jpeg" alt="Fruit Salad" loading="lazy" />
+            <h3>Fruit Salad</h3>
+            <p class="muted">Fresh seasonal fruits.</p>
+            <span class="price">45 L.E</span>
+            <button
+              data-add-cart
+              data-id="fruit-salad-1"
+              data-title="Fruit Salad"
+              data-price="45"
+              aria-label="Add Fruit Salad to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category: Main Meals -->
+      <section class="category-section" id="main-meals">
+        <h2>Main Meals</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="assets/images/meat.jpeg" alt="Grilled Meat Meal" loading="lazy" />
+            <h3>Grilled Meat Meal</h3>
+            <p class="muted">Served with rice and fresh salad.</p>
+            <span class="price">250 L.E</span>
+            <button
+              data-add-cart
+              data-id="meal-1"
+              data-title="Grilled Meat Meal"
+              data-price="250"
+              aria-label="Add Grilled Meat Meal to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/pasta.jpeg" alt="Creamy Pasta" loading="lazy" />
+            <h3>Creamy Pasta</h3>
+            <p class="muted">Pasta with creamy mushroom sauce.</p>
+            <span class="price">180 L.E</span>
+            <button
+              data-add-cart
+              data-id="pasta-1"
+              data-title="Creamy Pasta"
+              data-price="180"
+              aria-label="Add Creamy Pasta to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/chicken.jpeg" alt="Grilled Chicken Meal" loading="lazy" />
+            <h3>Grilled Chicken Meal</h3>
+            <p class="muted">Served with Creamy Pesto Pasta and Roasted Potatoes.</p>
+            <span class="price">200 L.E</span>
+            <button
+              data-add-cart
+              data-id="Grilled Chicken Meal-1"
+              data-title="Grilled Chicken Meal"
+              data-price="200"
+              aria-label="Add Grilled Chicken Meal to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category: Desserts -->
+      <section class="category-section" id="desserts">
+        <h2>Desserts</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="assets/images/dessert.jpeg" alt="Chocolate Dessert" loading="lazy" />
+            <h3>Chocolate Dessert</h3>
+            <p class="muted">Rich and creamy chocolate delight.</p>
+            <span class="price">20 L.E</span>
+            <button
+              data-add-cart
+              data-id="dessert-1"
+              data-title="Chocolate Dessert"
+              data-price="20"
+              aria-label="Add Chocolate Dessert to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/fruit-tart.jpeg" alt="Fruit Tart" loading="lazy" />
+            <h3>Fruit Tart</h3>
+            <p class="muted">Fresh fruits on a crispy tart base.</p>
+            <span class="price">25 L.E</span>
+            <button
+              data-add-cart
+              data-id="fruit-tart-1"
+              data-title="Fruit Tart"
+              data-price="25"
+              aria-label="Add Fruit Tart to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/ice-cream.jpeg" alt="Vanilla Ice Cream" loading="lazy" />
+            <h3>Vanilla Ice Cream</h3>
+            <p class="muted">Classic vanilla flavor.</p>
+            <span class="price">15 L.E</span>
+            <button
+              data-add-cart
+              data-id="ice-cream-1"
+              data-title="Vanilla Ice Cream"
+              data-price="15"
+              aria-label="Add Vanilla Ice Cream to cart"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="socials">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter(X)</a>
+      </div>
+      <p>&copy; 2025 CHEF FOOD Shop. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

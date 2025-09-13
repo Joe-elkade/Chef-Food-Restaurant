@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CHEF FOOD Shop - Offers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Additional styles for offers page */
+    .offer-price {
+      font-weight: 700;
+      color: #d9534f; /* Bootstrap danger red for offers */
+      font-size: 1.2rem;
+      margin-right: 8px;
+    }
+    .original-price {
+      text-decoration: line-through;
+      color: var(--muted-color);
+      font-size: 1rem;
+    }
+    .product-card p.offer-text {
+      color: #d9534f;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">CHEF FOOD Shop</a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="offers.html" class="active">Offers</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle" aria-label="Toggle theme">Dark</button>
+        <button class="cart-btn" onclick="location.href='cart.html'" aria-label="View cart">
+          🛒 <span class="cart-count" style="display:none">0</span>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav container">
+      <a href="index.html">Home</a> |
+      <a href="products.html">Products</a> |
+      <a href="offers.html">Offers</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>Special Offers</h2>
+
+      <div class="search-wrap">
+        <input
+          id="product-search"
+          placeholder="Search offers, e.g. 'juice' or 'salad'"
+          aria-label="Search offers"
+        />
+      </div>
+
+      <div class="products-grid">
+        <!-- Offer 1 -->
+        <div class="product-card">
+          <img src="assets/images/juice.jpeg" alt="Fresh Orange Juice" loading="lazy" />
+          <h3>Fresh Orange Juice</h3>
+          <p class="offer-text">20% OFF - Limited Time!</p>
+          <span class="offer-price">20 L.E</span>
+          <span class="original-price">25 L.E</span>
+          <button
+            data-add-cart
+            data-id="juice-1"
+            data-title="Fresh Orange Juice"
+            data-price="20"
+            aria-label="Add Fresh Orange Juice to cart"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Offer 2 -->
+        <div class="product-card">
+          <img src="assets/images/salad.jpeg" alt="Fresh Salad" loading="lazy" />
+          <h3>Fresh Salad</h3>
+          <p class="offer-text">15% OFF - Fresh & Tasty</p>
+          <span class="offer-price">17 L.E</span>
+          <span class="original-price">20 L.E</span>
+          <button
+            data-add-cart
+            data-id="Fresh salad-1"
+            data-title="Fresh Salad"
+            data-price="17"
+            aria-label="Add Fresh Salad to cart"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Offer 3 -->
+        <div class="product-card">
+          <img src="assets/images/meat.jpeg" alt="Grilled Meat Meal" loading="lazy" />
+          <h3>Grilled Meat Meal</h3>
+          <p class="offer-text">10% OFF - Chef's Special</p>
+          <span class="offer-price">225 L.E</span>
+          <span class="original-price">250 L.E</span>
+          <button
+            data-add-cart
+            data-id="meal-1"
+            data-title="Grilled Meat Meal"
+            data-price="225"
+            aria-label="Add Grilled Meat Meal to cart"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Offer 4 -->
+        <div class="product-card">
+          <img src="assets/images/dessert.jpeg" alt="Chocolate Dessert" loading="lazy" />
+          <h3>Chocolate Dessert</h3>
+          <p class="offer-text">25% OFF - Sweet Treat</p>
+          <span class="offer-price">15 L.E</span>
+          <span class="original-price">20 L.E</span>
+          <button
+            data-add-cart
+            data-id="dessert-1"
+            data-title="Chocolate Dessert"
+            data-price="15"
+            aria-label="Add Chocolate Dessert to cart"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="socials">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter(X)</a>
+      </div>
+      <p>&copy; 2025 CHEF FOOD Shop. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
